@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+   font-family: 'Lato', sans-serif;     
+    background-color: #fff;
+    color:#000;
+    font-size:20px;
+    font-weight:300;
+    text-rendering: optimizeLegibility;
+    
+}
+/* clear the float after an element i.e overlapping*/
+.clearfix{zoom:1}
+.clearfix:after{
+    content: '.';
+    clear:both;
+    display: block;
+    height:hidden;
+}
+
+/* resuable components*/
+
+.row{
+    max-width:1140px;
+    margin:0 auto;
+}
+.section-1{
+    padding:80x 0;
+}
+
+
+/*  header section starts here*/
+header{
+    /*    put text on image -is by  image darker for- that use linear gradient on top of image*/
+   background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(..//images/back2.jpg); 
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.herotextbox{
+    position: absolute;
+    width:1140px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    /*  here  transform property -to use to translate element into center */
+}
+/* heading in header*/
+h1{
+    
+/*     avoid top white space use margin 0 here*/
+    margin-top: 0;
+    /*     to add distance to button*/
+    
+    margin-bottom:20px;
+     word-spacing: 3px; 
+    color:#fff;
+    font-size: 50px;
+    font-weight:300;
+/*     then only font large*/
+    letter-spacing: 1px;
+   
+
+}
+
+h2{
+   text-align: center;
+    font-size:30px;
+    padding-top:10px;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    margin-top:40px;
+    
+}
+h2:after{
+    display: block;
+    height: 2px;
+    background-color:#d35400;
+    content: "";
+    width:100px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+h3{
+    font-size:110%;
+    margin-bottom: 15px;
+}
+/* paragraph*/
+.longtext{
+/*     line height between 120% and 145%*/
+    line-height: 145%;
+/*    paragraph little less wide*/
+    width:70%;
+    margin-left:15%;
+/*     centered*/
+}
+.box{
+    padding:1%;
+}
+.box p{
+    font-size:90%;
+    line-height: 145%;
+}
+/* link*/
+a:link,
+a:visited
+{
+    color:orangered;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid orangered;
+}
+a:hover,
+a:active
+{
+  color:green;  
+}
+
+
+
+
+/* buttons in header */
+
+.button:link,
+.button:visited
+{
+ display: inline-block;
+ padding: 10px 30px;
+font-weight: 300px;
+text-decoration: none;
+border-radius: 200px; 
+    /* transition*/
+    transition:background-color 0.2s,border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited
+ {
+    color:#fff;
+    background-color: #d35400;
+    border: 1px solid #d35400;
+/*     here border given bez 2nd content is large .so look same give the same border here*/
+     margin-right:15px;
+}
+.btn-half:link,
+.btn-half:visited
+ {
+    
+    border: 1px solid #d35400;
+    color:#d35400;
+} 
+.button:hover,
+.button:active
+{
+ background-color:#5c2500;   
+}
+.btn-full:hover,
+.btn-full:active
+ {
+    
+    border: 1px solid #d35400;
+}
+.btn-half:hover,
+.btn-half:active
+ {
+    
+    border: 1px solid #d35400;
+    color:#fff;
+}
+
+.logo{
+    height:100px;
+    width:auto;
+    float: left;
+    margin-top:20px;
+    margin-left:90px;
+}
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 35px;
+    margin-right:90px;
+    display: flex;
+/*    background-color:black;*/
+/*    background-image:linear-gradient(linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)));*/
+    justify-content: space-between;
+    overflow: hidden;
+    z-index:500;
+    
+}
+.main-nav li{
+    
+    margin-left: 40px;
+    
+}
+
+.main-nav li a:link,
+.main-nav li a:visited
+ {
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:20px;
+     border-bottom: 2px solid transparent;
+     transition:border-bottom 0.2s;
+}
+.main-nav li a:hover,
+ .main-nav li a:active
+ {
+    border-bottom: 2px solid #d35400;
+     padding-bottom: 5px;
+}
+*/
+
+/* section 2 meal phots*/
+.section-2{
+    padding:0;
+/*    margin-top: 30px;*/
+    
+    
+}
+
+.meals{
+    list-style: none;
+    width:100%;
+/*     here width 100% bez  we need the whole width of the browser*/
+        
+}
+.meals li{
+    display: block;
+    float:left;
+    width:25%;
+/*    here total width of ul is 100 % we above  also we need to place 4 elemnts in a row so 25% width   */
+}
+.mealphoto{
+    width:100%;
+/*    i.e exact width of parent element  i.e 25%  li is the parent elemnt of class mealphoto*/
+      margin:0;
+    background: #000;
+    overflow: hidden;
+}
+.mealphoto img{
+    opacity:0.7;
+    width:100%;
+    height:auto;
+    transform: scale(1.15);
+    transition:transform 0.5s,opacity 0.5s;
+}
+.mealphoto img:hover{
+    opacity:1;
+    transform: scale(1.03);
+}
+.section-3{
+    background-color:whitesmoke;
+}
+
+.step-box:first-child
+{
+/*    text align work for all inline block,block image etc not only for text.Also this box for left child*/
+    text-align: right;
+    padding-right: 3%;
+    margin-top:30px;
+}
+/* right side box*/
+
+.step-box:last-child{
+    padding-left: 3%;
+    margin-top:70px;
+}
+/* image size  reduce
+.app{
+    width:40%;
+}*/
+
+.steps{
+    margin-bottom: 50px;
+}
+.steps:last-of-type{
+    margin-bottom: 80px;
+}
+
+
+
+.steps div{
+    color:orangered;
+    border:2px solid orangered;
+    display:inline-block;
+    border-radius: 50%;
+    height:50px;
+    width:50px;
+    text-align: center;
+    padding:5px;
+    float: left;
+    font-size:150%;
+    margin-right: 25px;
+    
+}
+.btn-app:link,
+.btn-app:visited
+{
+border:0;
+    
+}
+
+.btn-app img{
+    
+    height:50px;
+    width: auto;
+    margin-right:20px;
+} 
+/*cities*/
+.box1 img{
+    width: 100%;
+    height:auto;
+    margin-bottom: 15px;
+    
+}
+.cityfeature{
+    margin-bottom:5px;
+}
+.section-5{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(..//images/testimonialbackground.jpg);
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    background-attachment:fixed;
+}
+blockquote{
+    padding:2%;
+    font-style: italic;
+    line-height: 145%;
+}
+cite{
+    font-size:90%;
+    margin-top:25px;
+    display:block;
+}
+blockquote:before{
+    content: " \201C";
+    font-size:400%;
+}
+cite img{
+    height:50px;
+    border-radius:50%;
+    margin-right:10px;
+    vertical-align: middle;
+}
+.section-form{
+    width:60%;
+    margin:0 auto;
+}
+input[type=text],
+input[type=email],
+select,textarea{
+    width:100%;
+    padding:7px;
+    border-radius:3px;
+    
+}
+textarea{
+   height:100px; 
+}
+.enqbtn{
+display: inline-block;
+ padding: 10px 30px;
+font-weight: 300px;
+text-decoration: none;
+border-radius: 200px; 
+    /* transition*/
+    transition:background-color 0.2s,border 0.2s, color 0.2s;
+background-color: orangered;
+}
+
+.enqbtn:link,
+.enqbtn:visited
+
+ {
+    color:#fff;
+    background-color: #d35400;
+    border: 1px solid #d35400;
+/*     here border given bez 2nd content is large .so look same give the same border here*/
+     margin-right:15px;
+}
+.enqbtn:hover,
+..enqbtn:active
+
+ {
+ border: 1px solid #5c2500;
+}
+
+footer{
+    width:100%;
+    height:70px;
+    background-color:#333;
+    text-align:center;
+    margin-top:10px;
+    padding-top: 20px;
+    color:white;
+}
+
+
